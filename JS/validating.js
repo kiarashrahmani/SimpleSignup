@@ -9,13 +9,20 @@
             var lastname = document.getElementById("Lastname").value;
             var email = document.getElementById("Email").value;
             var maritalStatus = document.getElementById("Marital").value;
+            var password = document.getElementById("Password").value;
+
 
             // Basic validation, you can add more specific checks as needed
-            if (firstname.trim() === "" || lastname.trim() === "" || !isValidEmail(email)) {
+            if (firstname.trim() === "" || lastname.trim() === "" || !isValidEmail(email) ) {
                 alert("Please fill in all the required fields and provide a valid email address.");
-            } else {
+            }
+            else if (!isStrongPassword(password)) {
+                 alert("Please enter a stronger password");
+            }               
+ 
+            else {
                 // Form is valid, you can proceed with form submission or other actions
-                alert("Form submitted successfully!\nFirstname: " + firstname + "\nLastname: " + lastname + "\nEmail: " + email + "\nMarital Status: " + maritalStatus);
+                alert("Form submitted successfully!\nFirstname: " + firstname + "\nLastname: " + lastname + "\nEmail: " + email + "\nMarital Status: " + maritalStatus );
                 // Add further processing or form submission logic here
             }
         }

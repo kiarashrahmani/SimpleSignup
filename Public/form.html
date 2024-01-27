@@ -1,0 +1,38 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<h1 class="titles">sign-up</h1> 
+<form id="signupForm" action="/save" method="post">
+    <div class="container">
+        <div class="container div1">
+            <label for="Firstname">Firstname:</label>
+            <input type="text" id="Firstname" name="Firstname">
+        </div>
+        <div class="container div2">
+            <label for="Lastname">Lastname:</label>
+            <input type="text" id="Lastname" name="Lastname">
+        </div>
+        <div class="container div3">
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email">
+        </div>
+        <div class="container div4">
+            <label for="Marital">Marital Status:</label>
+            <select id="Marital" name="Marital">
+                <option value="Married">Married</option>
+                <option value="Not-Married">Not-Married</option>
+            </select>
+        </div>
+        <button id="button" type="submit">Submit</button>
+    </div>
+</form>
+<script src="JS/validating.js"></script>
+<script src="../app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

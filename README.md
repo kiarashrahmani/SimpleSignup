@@ -57,6 +57,10 @@
 <section>
         <h2>Screenshot</h2>
         <img src="Screenshot.JPG" alt="screenshot"></img>
+        <img src="Screenshot%20(1).png" alt="screenshot1"></img>
+        <img src="Screenshot%20(2).png" alt="screenshot2"></img>
+        <img src="Screenshot%20(3).png" alt="screenshot3"></img>
+
 </section>
 
 <section>

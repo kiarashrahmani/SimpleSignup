@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     // Get data from the AJAX request
     const formData = req.body;
 
-    // Insert data into the 'userdata' table
+    // Insert data into the 'user' table
     const query = 'INSERT INTO user (Firstname, Lastname, Email, Marital) VALUES (?, ?, ?, ?)';
     const values = [formData.Firstname, formData.Lastname, formData.Email, formData.Marital];
 

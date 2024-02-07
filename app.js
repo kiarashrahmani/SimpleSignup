@@ -4,23 +4,20 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
-// Middleware
+app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
+const getForm = require(path.join(__dirname, 'Public', 'JS', 'API.js'));
 
-// Serve the form.html file at the root path
+// Handle requests to the root path '/'
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'form.html'));
 });
 
-// Import route.js file
-const routes = require('./route');
-
-// Route handling
-app.use('/', routes);
-
-// Server
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
+
+app.use('/save', getForm);
+
